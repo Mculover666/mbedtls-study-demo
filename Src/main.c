@@ -59,6 +59,9 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 extern int mbedtls_ctr_drbg_test(void);
+
+#include "mbedtls/md.h"
+extern int mbedtls_shax_test(mbedtls_md_type_t md_type);
 /* USER CODE END 0 */
 
 /**
@@ -97,29 +100,13 @@ int main(void)
   /* USER CODE BEGIN 2 */
     printf("mbedtls port on BearPi-STM32L431RC board by mculover666\r\n");
 
-//    /* 0. sha1 test */
-//    char *source_cxt = "mculover666";
-//    char encrypt_cxt[64];
-
-//    printf("source context is:%s\r\n", source_cxt);
-
-//    mbedtls_sha1_context sha1_ctx;
-//    mbedtls_sha1_init(&sha1_ctx);
-//    mbedtls_sha1_starts(&sha1_ctx);
-//    mbedtls_sha1_update(&sha1_ctx, (unsigned char *)source_cxt, strlen(source_cxt));
-//    mbedtls_sha1_finish(&sha1_ctx, (unsigned char *)encrypt_cxt);
-//    mbedtls_sha1_free(&sha1_ctx);
-//
-//    int i = 0;
-//    printf("sha1 encrypt context is:[");
-//    while (encrypt_cxt[i]) {
-//      printf("%02x", encrypt_cxt[i]);
-//      i++;
-//    }
-//    printf("]\r\n");
+    /* 0. sha1 sha256 sha512 test */
+    mbedtls_shax_test(MBEDTLS_MD_SHA1);
+    mbedtls_shax_test(MBEDTLS_MD_SHA256);
+    mbedtls_shax_test(MBEDTLS_MD_SHA512);
     
     /* 1. crt_drbg test */
-    mbedtls_ctr_drbg_test();
+    //mbedtls_ctr_drbg_test();
 
 
   /* USER CODE END 2 */

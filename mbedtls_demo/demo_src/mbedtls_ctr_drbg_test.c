@@ -4,6 +4,14 @@
  * @date    2020/09/22
 */
 
+#if !defined(MBEDTLS_CONFIG_FILE)
+#include "mbedtls/config.h"
+#else
+#include MBEDTLS_CONFIG_FILE
+#endif
+
+#if defined(MBEDTLS_CTR_DRBG_C)
+
 #include <stdio.h>
 #include "string.h"
 #include "mbedtls/entropy.h"
@@ -62,3 +70,5 @@ int mbedtls_ctr_drbg_test(void)
     
     return ret;
 }
+
+#endif /* MBEDTLS_CTR_DRBG_C */
