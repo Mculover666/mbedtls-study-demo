@@ -62,6 +62,16 @@ extern int mbedtls_ctr_drbg_test(void);
 
 #include "mbedtls/md.h"
 extern int mbedtls_shax_test(mbedtls_md_type_t md_type);
+
+#include "mbedtls/cipher.h"
+extern int aes_test(mbedtls_cipher_type_t cipher_type);
+
+#include "mbedtls/md.h"
+int mbedtls_hmac_test(mbedtls_md_type_t md_type);
+
+#include "mbedtls/cipher.h"
+int gcm_test(mbedtls_cipher_type_t cipher_type);
+
 /* USER CODE END 0 */
 
 /**
@@ -101,12 +111,22 @@ int main(void)
     printf("mbedtls port on BearPi-STM32L431RC board by mculover666\r\n");
 
     /* 0. sha1 sha256 sha512 test */
-    mbedtls_shax_test(MBEDTLS_MD_SHA1);
-    mbedtls_shax_test(MBEDTLS_MD_SHA256);
-    mbedtls_shax_test(MBEDTLS_MD_SHA512);
+    //mbedtls_shax_test(MBEDTLS_MD_SHA1);
+    //mbedtls_shax_test(MBEDTLS_MD_SHA256);
+    //mbedtls_shax_test(MBEDTLS_MD_SHA512);
     
     /* 1. crt_drbg test */
     //mbedtls_ctr_drbg_test();
+
+    /* 2. aes test */
+    //aes_test(MBEDTLS_CIPHER_AES_128_CBC);
+    //aes_test(MBEDTLS_CIPHER_AES_128_CTR);
+    
+    /* 3. hamc test */
+    //mbedtls_hmac_test(MBEDTLS_MD_SHA256);
+    
+    /* 4.gcm test */
+    gcm_test(MBEDTLS_CIPHER_AES_128_GCM);
 
 
   /* USER CODE END 2 */

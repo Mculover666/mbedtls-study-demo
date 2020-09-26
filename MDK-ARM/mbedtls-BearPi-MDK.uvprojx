@@ -337,7 +337,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>MBEDTLS_CONFIG_FILE=&lt;mbedtls_config_sha_x.h&gt;,USE_HAL_DRIVER,STM32L431xx</Define>
+              <Define>MBEDTLS_CONFIG_FILE=&lt;mbedtls_config_gcm.h&gt;,USE_HAL_DRIVER,STM32L431xx</Define>
               <Undefine></Undefine>
               <IncludePath>../Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;..\mbedtls\include\;..\mbedtls\config;..\mbedtls_demo\demo_config</IncludePath>
             </VariousControls>
@@ -993,6 +993,21 @@
               <FileType>5</FileType>
               <FilePath>..\mbedtls_demo\demo_config\mbedtls_config_sha_x.h</FilePath>
             </File>
+            <File>
+              <FileName>mbedtls_config_aes.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\mbedtls_demo\demo_config\mbedtls_config_aes.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbedtls_config_hmac.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\mbedtls_demo\demo_config\mbedtls_config_hmac.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbedtls_config_gcm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\mbedtls_demo\demo_config\mbedtls_config_gcm.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1017,6 +1032,21 @@
               <FileName>mbedtls_sha_x_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\mbedtls_demo\demo_src\mbedtls_sha_x_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbedtls_aes_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbedtls_demo\demo_src\mbedtls_aes_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbedtls_hmac_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbedtls_demo\demo_src\mbedtls_hmac_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbedtls_gcm_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbedtls_demo\demo_src\mbedtls_gcm_test.c</FilePath>
             </File>
           </Files>
         </Group>
