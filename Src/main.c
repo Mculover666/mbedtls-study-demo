@@ -72,6 +72,8 @@ int mbedtls_hmac_test(mbedtls_md_type_t md_type);
 #include "mbedtls/cipher.h"
 int gcm_test(mbedtls_cipher_type_t cipher_type);
 
+extern int mbedtls_rsa_test(void);
+
 /* USER CODE END 0 */
 
 /**
@@ -126,7 +128,10 @@ int main(void)
     //mbedtls_hmac_test(MBEDTLS_MD_SHA256);
     
     /* 4.gcm test */
-    gcm_test(MBEDTLS_CIPHER_AES_128_GCM);
+    //gcm_test(MBEDTLS_CIPHER_AES_128_GCM);
+    
+    /* 5. rsa test */
+    mbedtls_rsa_test();
 
 
   /* USER CODE END 2 */
