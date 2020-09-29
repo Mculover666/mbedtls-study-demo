@@ -74,6 +74,8 @@ int gcm_test(mbedtls_cipher_type_t cipher_type);
 
 extern int mbedtls_rsa_test(void);
 
+extern int mbedtls_dhm_test(void);
+
 /* USER CODE END 0 */
 
 /**
@@ -131,7 +133,10 @@ int main(void)
     //gcm_test(MBEDTLS_CIPHER_AES_128_GCM);
     
     /* 5. rsa test */
-    mbedtls_rsa_test();
+    //mbedtls_rsa_test();
+    
+    /* 6. dh test */
+    mbedtls_dhm_test();
 
 
   /* USER CODE END 2 */

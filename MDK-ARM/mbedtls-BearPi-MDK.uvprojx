@@ -337,7 +337,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>MBEDTLS_CONFIG_FILE=&lt;mbedtls_config_rsa.h&gt;,USE_HAL_DRIVER,STM32L431xx</Define>
+              <Define>MBEDTLS_CONFIG_FILE=&lt;mbedtls_config_dhm.h&gt;,USE_HAL_DRIVER,STM32L431xx</Define>
               <Undefine></Undefine>
               <IncludePath>../Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;..\mbedtls\include\;..\mbedtls\config;..\mbedtls_demo\demo_config</IncludePath>
             </VariousControls>
@@ -1013,6 +1013,11 @@
               <FileType>5</FileType>
               <FilePath>..\mbedtls_demo\demo_config\mbedtls_config_rsa.h</FilePath>
             </File>
+            <File>
+              <FileName>mbedtls_config_dhm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\mbedtls_demo\demo_config\mbedtls_config_dhm.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1057,6 +1062,11 @@
               <FileName>mbedtls_rsa_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\mbedtls_demo\demo_src\mbedtls_rsa_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbedtls_dhm_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbedtls_demo\demo_src\mbedtls_dhm_test.c</FilePath>
             </File>
           </Files>
         </Group>
