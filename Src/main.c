@@ -76,6 +76,8 @@ extern int mbedtls_rsa_test(void);
 
 extern int mbedtls_dhm_test(void);
 
+extern int mbedtls_ecdh_test(void);
+
 /* USER CODE END 0 */
 
 /**
@@ -136,7 +138,10 @@ int main(void)
     //mbedtls_rsa_test();
     
     /* 6. dh test */
-    mbedtls_dhm_test();
+    //mbedtls_dhm_test();
+    
+    /* 7. ecdh test */
+    mbedtls_ecdh_test();
 
 
   /* USER CODE END 2 */
