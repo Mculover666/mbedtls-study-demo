@@ -82,6 +82,8 @@ extern int mbedtls_rsa_sign_test(void);
 
 extern int mbedtls_ecdsa_test(void);
 
+extern int mbedtls_x509_test(void);
+
 /* USER CODE END 0 */
 
 /**
@@ -151,7 +153,10 @@ int main(void)
     //mbedtls_rsa_sign_test();
     
     /* 9. ecdsa sign test */
-    mbedtls_ecdsa_test();
+    //mbedtls_ecdsa_test();
+    
+    /* 10. x509 test */
+    mbedtls_x509_test();
 
 
   /* USER CODE END 2 */
